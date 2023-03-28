@@ -29,6 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--gray-50);
+  transition: background-color 100ms ease-in;
 }
 
 body[data-theme='dark'] {
