@@ -17,7 +17,7 @@ export const Search = ({ hasError, onSubmit }: SearchProps) => {
     event.preventDefault();
     const text = event.currentTarget.username.value;
 
-    if (text) {
+    if (text.trim()) {
       onSubmit(text);
       event.currentTarget.reset();
     }
@@ -25,7 +25,7 @@ export const Search = ({ hasError, onSubmit }: SearchProps) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} >
+    <form onSubmit={handleSubmit} autoComplete='off' >
       <div className={styles.search}>
         <label htmlFor="search" className={styles.label}>
           <SearchIcon />

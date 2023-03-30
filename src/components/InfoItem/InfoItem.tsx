@@ -11,7 +11,7 @@ export const InfoItem = ({ icon, isLink, text }: InfoItemProps) => {
   let currentHref = '';
 
   if (isLink) {
-    currentHref = text && text?.startsWith('http') ? text : `https://${text}`
+    currentHref = text && text.startsWith('http') ? text : `https://${text}`
   }
 
   return (
@@ -25,7 +25,7 @@ export const InfoItem = ({ icon, isLink, text }: InfoItemProps) => {
             rel='noreferrer'
             className={styles.link}
           >
-            currentText
+            {currentText}
           </a>
         ) : currentText}
       </div>
