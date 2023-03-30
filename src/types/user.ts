@@ -11,7 +11,7 @@ export type LocalGithubUser = {
   repos: string,
   followers: number,
   following: number,
-  creater: string
+  created: string
 }
 
 export type GithubUser = {
